@@ -37,7 +37,7 @@
     "lib-ios/libcrypto.a",
     "lib-ios/libssl.a"
   ],
-  "requires_arc": false,
+  "libraries": "c++",
   "xcconfig": {
     "HEADER_SEARCH_PATHS": "${PODS_ROOT}/include-ios",
     "LIBRARY_SEARCH_PATHS": "${PODS_ROOT}/lib-ios"
