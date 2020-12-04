@@ -39,6 +39,7 @@
   ],
   "requires_arc": false,
   "xcconfig": {
-    "HEADER_SEARCH_PATHS": "${PODS_ROOT}/include-ios"
+    "HEADER_SEARCH_PATHS": "${PODS_ROOT}/include-ios",
+    "LIBRARY_SEARCH_PATHS": "${PODS_ROOT}/lib-ios"
   }
 }
