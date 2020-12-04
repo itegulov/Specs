@@ -19,10 +19,12 @@
     "ios": "7.0"
   },
   "pod_target_xcconfig": {
-    "EXCLUDED_ARCHS[sdk=iphonesimulator*]": "arm64"
+    "EXCLUDED_ARCHS[sdk=iphonesimulator*]": "arm64",
+    "ONLY_ACTIVE_ARCH": "YES"
   },
   "user_target_xcconfig": {
-    "EXCLUDED_ARCHS[sdk=iphonesimulator*]": "arm64"
+    "EXCLUDED_ARCHS[sdk=iphonesimulator*]": "arm64",
+    "ONLY_ACTIVE_ARCH": "YES"
   },
   "source_files": "include-ios/openssl/**/*.h",
   "public_header_files": "include-ios/openssl/**/*.h",
@@ -35,5 +37,8 @@
     "lib-ios/libcrypto.a",
     "lib-ios/libssl.a"
   ],
-  "requires_arc": false
+  "requires_arc": false,
+  "xcconfig": {
+    "HEADER_SEARCH_PATHS": "${PODS_ROOT}/include-ios"
+  }
 }
