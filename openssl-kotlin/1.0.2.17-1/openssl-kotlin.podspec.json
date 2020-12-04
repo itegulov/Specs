@@ -28,15 +28,15 @@
   },
   "source_files": "include-ios/openssl/**/*.h",
   "public_header_files": "include-ios/openssl/**/*.h",
-  "header_dir": "openssl",
-  "preserve_paths": [
-    "lib-ios/libcrypto.a",
-    "lib-ios/libssl.a"
-  ],
-  "vendored_libraries": [
-    "lib-ios/libcrypto.a",
-    "lib-ios/libssl.a"
-  ],
+  //"header_dir": "openssl",
+  //"preserve_paths": [
+  //  "lib-ios/libcrypto.a",
+  //  "lib-ios/libssl.a"
+  //],
+  //"vendored_libraries": [
+  //  "lib-ios/libcrypto.a",
+  //  "lib-ios/libssl.a"
+  //],
   "libraries": "c++",
   "xcconfig": {
     "HEADER_SEARCH_PATHS": "${PODS_ROOT}/include-ios",
