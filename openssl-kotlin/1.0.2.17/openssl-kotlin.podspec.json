@@ -8,34 +8,32 @@
     "type": "OpenSSL (OpenSSL/SSLeay)",
     "file": "LICENSE.txt"
   },
+  "authors": {
+    "Daniyar Itegulov": "ditegulov@gmail.com"
+  },
   "source": {
     "git": "https://github.com/krzyzanowskim/OpenSSL.git",
     "tag": "1.0.2.17"
   },
-  "authors": {
-    "Daniyar Itegulov": "ditegulov@gmail.com"
-  },
   "platforms": {
-    "ios": "6.0"
+    "ios": "7.0"
   },
-  "ios": {
-    "pod_target_xcconfig": {
-        "EXCLUDED_ARCHS[sdk=iphonesimulator*]": "arm64"
-    },
-    "user_target_xcconfig": {
-	"EXCLUDED_ARCHS[sdk=iphonesimulator*]": "arm64"
-    },
-    "source_files": "include-ios/openssl/**/*.h",
-    "public_header_files": "include-ios/openssl/**/*.h",
-    "header_dir": "openssl",
-    "preserve_paths": [
-      "lib-ios/libcrypto.a",
-      "lib-ios/libssl.a"
-    ],
-    "vendored_libraries": [
-      "lib-ios/libcrypto.a",
-      "lib-ios/libssl.a"
-    ]
+  "pod_target_xcconfig": {
+    "EXCLUDED_ARCHS[sdk=iphonesimulator*]": "arm64"
   },
+  "user_target_xcconfig": {
+    "EXCLUDED_ARCHS[sdk=iphonesimulator*]": "arm64"
+  },
+  "source_files": "include-ios/openssl/**/*.h",
+  "public_header_files": "include-ios/openssl/**/*.h",
+  "header_dir": "openssl",
+  "preserve_paths": [
+    "lib-ios/libcrypto.a",
+    "lib-ios/libssl.a"
+  ],
+  "vendored_libraries": [
+    "lib-ios/libcrypto.a",
+    "lib-ios/libssl.a"
+  ],
   "requires_arc": false
 }
