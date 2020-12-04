@@ -16,37 +16,35 @@
     "tag": "1.0.2.17"
   },
   "platforms": {
-    "ios": "7.0",
-    "osx": "10.7"
+    "ios": "7.0"
   },
-  "prepare_command": "echo \"PWD BELOW:\n\" && pwd",
-  //"pod_target_xcconfig": {
-  //  "EXCLUDED_ARCHS[sdk=iphonesimulator*]": "arm64",
-  //  "ONLY_ACTIVE_ARCH": "YES"
-  //},
-  //"user_target_xcconfig": {
-  //  "EXCLUDED_ARCHS[sdk=iphonesimulator*]": "arm64",
-  //  "ONLY_ACTIVE_ARCH": "YES"
-  //},
+  "pod_target_xcconfig": {
+    "EXCLUDED_ARCHS[sdk=iphonesimulator*]": "arm64",
+    "ONLY_ACTIVE_ARCH": "YES"
+  },
+  "user_target_xcconfig": {
+    "EXCLUDED_ARCHS[sdk=iphonesimulator*]": "arm64",
+    "ONLY_ACTIVE_ARCH": "YES"
+  },
   "source_files": "include-ios/openssl/*.h",
-  //"public_header_files": "include-ios/openssl/**/*.h",
+  "public_header_files": "include-ios/openssl/**/*.h",
   //"header_dir": "openssl",
-  //"preserve_paths": [
-  //  "lib-ios/libcrypto.a",
-  //  "lib-ios/libssl.a"
-  //],
-  //"vendored_libraries": [
-  //  "lib-ios/libcrypto.a",
-  //  "lib-ios/libssl.a"
-  //],
-  "script_phases": {
+  "preserve_paths": [
+    "lib-ios/libcrypto.a",
+    "lib-ios/libssl.a"
+  ],
+  "vendored_libraries": [
+    "lib-ios/libcrypto.a",
+    "lib-ios/libssl.a"
+  ],
+  "script_phase": {
     "name": "Move headers",
-    "script": "echo \"MOVING HEADERS!!!\" && ls",
-    "execution_position": "after_compile"
+    "script": "mv ${PODS_ROOT}/include-ios ${PODS_ROOT}/include && mv ${PODS_ROOT}/lib-ios ${PODS_ROOT}/lib",
+    "execution_position": "before_compile"
   },
-  "libraries": "c++"
-  //"xcconfig": {
-  //  "HEADER_SEARCH_PATHS": "${PODS_ROOT}/include-ios",
-  //  "LIBRARY_SEARCH_PATHS": "${PODS_ROOT}/lib-ios"
-  //}
+  "libraries": "c++",
+  "xcconfig": {
+    "HEADER_SEARCH_PATHS": "${PODS_ROOT}/include",
+    "LIBRARY_SEARCH_PATHS": "${PODS_ROOT}/lib"
+  }
 }
